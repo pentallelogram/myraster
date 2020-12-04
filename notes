@@ -1,0 +1,44 @@
+https://github.com/ssloy/tinyrenderer
+https://tayfunkayhan.wordpress.com/2018/11/24/rasterization-in-one-weekend-part-i/
+https://www.gabrielgambetta.com/computer-graphics-from-scratch/introduction.html
+
+https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation
+- rendering can be broken into two tasks: visibility and shading.
+  rasterization is work on the visibility part of the rendering problem.
+- where ray tracing projects light rays out onto the scene and discovers what
+  it contacts with raterization starts with the 3d objects and projects lines
+to the screen detecting which pixels should light up to make the shape.
+- for a triangle you simply project the vertices of the triangle to the screen,
+  draw the line between them and then figure out which pixels should fire.
+- the algorithm looks as follows:
+    for each triangle in image:
+        v0 = projectVertex2Screen(triangle.v0)
+        v1 = projectVertex2Screen(triangle.v1)
+        v2 = projectVertex2Screen(triangle.v2)
+        for each pixel in image:
+            if (pixelContainedByTriange(v0, v1, v2, pixel)
+                image(pixel.x, pixel.y) = triangle.color
+- Rasterization is the process of determining which pixels are inside a
+  triangle, and nothing more. (Michael Abrash in Rasterization on Larrabee)
+- you can optimize the algoritm by computing a bounding box and only iterating
+  the pixels within the box rather than the entire image.
+    for each triangle in image:
+        v0 = projectVertex2Screen(triangle.v0)
+        v1 = projectVertex2Screen(triangle.v1)
+        v2 = projectVertex2Screen(triangle.v2)
+        box.x = max_x(v0, v1, v2);
+        box.y = max_y(v0, v1, v2);
+        for each pixel in box:
+            if (pixelContainedByTriange(v0, v1, v2, pixel)
+                image(pixel.x, pixel.y) = triangle.color
+
+
+Progress:
+continue at https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation/overview-rasterization-algorithm
+" Optimizing: 2D Triangles Bounding Box " section
+
+https://github.com/ssloy/tinyrenderer/wiki/Lesson-1-Bresenham%E2%80%99s-Line-Drawing-Algorithm
+Implement "Third Attempt"
+
+
+
