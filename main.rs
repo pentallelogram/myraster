@@ -47,17 +47,16 @@ fn line( x0: u32,  y0: u32,   x1: u32,  y1: u32) {
 fn main() {
     let t = time::Duration::from_secs(2);
 
-    // down to the left
-    line( 0, 0, 20, 20); thread::sleep(t);
+    line( 0, 0, 20, 20); thread::sleep(t); // down to the left
+    line( 40, 40, 20, 20); thread::sleep(t); // up to the right
+    line( 40, 0, 20, 20); thread::sleep(t); // down to the left
+    line( 0, 40, 20, 20); thread::sleep(t); // up to the right
 
-    // up to the right
-    line( 40, 40, 20, 20); thread::sleep(t);
-
-    // down to the left
-    line( 40, 0, 20, 20); thread::sleep(t);
-
-    // up to the right
-    line( 0, 40, 20, 20); thread::sleep(t);
+    line( 20, 0, 20, 20); thread::sleep(t); // down
+    line( 20, 40, 20, 20); thread::sleep(t); // up
+    line( 40, 20, 20, 20); thread::sleep(t); // left
+    line( 0, 20, 20, 20); thread::sleep(t); // right
+    
 
     return;
 }
