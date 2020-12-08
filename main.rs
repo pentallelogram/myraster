@@ -5,7 +5,7 @@ use std::mem::swap;
 use std::{thread, time};
 
 // Bresenham’s Line Drawing Algorithm
-fn line(mut x0: u32, mut y0: u32, mut  x1: u32, mut y1: u32) {
+fn line( x0: u32,  y0: u32,   x1: u32,  y1: u32) {
 
     println!("\ncase: x0: {}\ty0: {} \t&& \tx1: {}\ty1: {}", x0, y0, x1, y1);
 
