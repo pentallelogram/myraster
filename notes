@@ -1,3 +1,7 @@
+starting from this blog:
+https://erkaman.github.io/posts/beginner_computer_graphics.html
+
+I got these recommendations:
 https://github.com/ssloy/tinyrenderer
 https://tayfunkayhan.wordpress.com/2018/11/24/rasterization-in-one-weekend-part-i/
 https://www.gabrielgambetta.com/computer-graphics-from-scratch/introduction.html
@@ -32,6 +36,8 @@ to the screen detecting which pixels should light up to make the shape.
             if (pixelContainedByTriange(v0, v1, v2, pixel)
                 image(pixel.x, pixel.y) = triangle.color
 
+
+making classes in rust, good intro: https://jimmco.medium.com/classes-in-rust-c5b72c0f0a4c
 
 Progress:
 continue at https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation/overview-rasterization-algorithm
